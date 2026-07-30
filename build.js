@@ -28,6 +28,12 @@ const pages = [
     aliases: ["helixnote.html"],
   },
   {
+    title: "Research",
+    source: "research.html",
+    output: path.join("research", "index.html"),
+    aliases: ["research.html"],
+  },
+  {
     title: "Contact",
     source: "contact.html",
     output: path.join("contact", "index.html"),
