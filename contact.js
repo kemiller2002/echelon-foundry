@@ -1,10 +1,11 @@
 const WORKER_BASE = "https://inquiry.echeloncommunications.com";
 
-function setStatus(form, msg, isError = false) {
+function setStatus(form, msg, state = "progress") {
   const el = form.querySelector(".form-status");
   if (!el) return;
-  el.textContent = msg;
-  el.style.color = isError ? "crimson" : "inherit";
+  const symbols = { progress: "…", success: "✓", error: "×" };
+  el.textContent = `${symbols[state]} ${msg}`;
+  el.dataset.state = state;
 }
 
 function setSubmitState(form, sending) {
@@ -61,20 +62,20 @@ document.querySelectorAll("form.contact-form").forEach((setupForm) => {
     data.site = location.hostname;
     data.formId = formId;
 
-    setStatus(form, "Sending...");
+    setStatus(form, "Sending...", "progress");
     setSubmitState(form, true);
     disableForm(form, true);
     try {
       const result = await submitToWorker(data);
 
       // Success UI
-      setStatus(form, "Thanks - your message has been received.");
+      setStatus(form, "Thanks - your message has been received.", "success");
       form.reset();
 
       // If you want a quiet debug in console:
       // console.log("Saved to repo:", result.path, result.commitSha);
     } catch (err) {
-      setStatus(form, err.message || "Something went wrong.", true);
+      setStatus(form, err.message || "Something went wrong.", "error");
     } finally {
       setSubmitState(form, false);
       disableForm(form, false);
