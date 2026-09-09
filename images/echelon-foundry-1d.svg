@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Echelon Foundry EF logo mark — 1D direction</title>
+  <desc id="desc">A charcoal square containing a geometric white EF monogram above a copper horizontal bar.</desc>
+
+  <!-- Palette
+       Charcoal: #1B1B1B
+       Warm white: #F2F0EB
+       Copper: #B8734A
+  -->
+
+  <g id="background">
+    <rect x="0" y="0" width="512" height="512" fill="#1B1B1B"/>
+  </g>
+
+  <!-- EF monogram: constructed entirely from vector rectangles; no font dependency -->
+  <g id="ef-monogram" fill="#F2F0EB">
+    <!-- E -->
+    <rect x="126" y="126" width="24" height="174"/>
+    <rect x="126" y="126" width="104" height="24"/>
+    <rect x="126" y="201" width="88" height="24"/>
+    <rect x="126" y="276" width="104" height="24"/>
+
+    <!-- F -->
+    <rect x="262" y="126" width="24" height="174"/>
+    <rect x="262" y="126" width="112" height="24"/>
+    <rect x="262" y="201" width="94" height="24"/>
+  </g>
+
+  <g id="copper-accent">
+    <rect x="126" y="342" width="248" height="22" fill="#B8734A"/>
+  </g>
+</svg>
