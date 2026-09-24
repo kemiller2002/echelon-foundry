@@ -1,0 +1,73 @@
+name: Echelon Bootstrap
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/echelon-bootstrap.yml"
+      - ".echelon/toolchain.json"
+      - "package.json"
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Install native Echelon toolchain
+        run: curl -fsSL https://raw.githubusercontent.com/kemiller2002/praxis/main/scripts/install-toolchain.sh | sh
+
+      - name: Activate pinned Praxis and Ordo
+        run: |
+          export PATH="$HOME/.echelon/bin:$PATH"
+          echelon setup
+          echelon doctor --verbose
+
+      - name: Initialize repository governance
+        run: |
+          export PATH="$HOME/.echelon/bin:$PATH"
+          praxis init
+          ordo init
+
+      - name: Initialize engineering contexts and boundary
+        run: |
+          npx visual-engineering init
+          npx communication-engineering init
+          npx limen init
+
+      - name: Verify Echelon systems
+        run: |
+          export PATH="$HOME/.echelon/bin:$PATH"
+          praxis verify
+          ordo verify
+          npm run echelon:verify
+
+      - name: Verify site
+        run: |
+          npm test
+          npm run build
+
+      - name: Commit managed Echelon state
+        run: |
+          if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Echelon state already current."
+            exit 0
+          fi
+          git config user.name "echelon-bootstrap"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Bootstrap Echelon engineering systems"
+          git push
