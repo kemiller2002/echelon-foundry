@@ -5,4 +5,4 @@
 | ROS-INSTALL-3-7-1 | ROS-INSTALL-3-7-1 | complete |  |  |
 | WI-0001 | Govern echelon-foundry with Praxis 3.7.1 and Ordo 1.4.0 | complete | praxis, ordo, toolchain | medium |
 | WI-0002 | Move echelon-foundry to Ordo 1.4.1 | complete | ordo, toolchain | medium |
-| WI-0003 | Move echelon-foundry to Praxis 3.7.2, Ordo 1.4.2 and Visual Engineering 1.0.1; adopt Conditor | ready | praxis, ordo, toolchain, conditor | medium |
+| WI-0003 | Move echelon-foundry to Praxis 3.7.2, Ordo 1.4.2 and Visual Engineering 1.0.1; adopt Conditor | complete | praxis, ordo, toolchain, conditor | medium |
