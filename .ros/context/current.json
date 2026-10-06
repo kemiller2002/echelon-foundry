@@ -4,7 +4,7 @@
   "repository": "echelon-foundry",
   "actor": "anthropic/claude-code",
   "startedAt": "2026-10-06T12:27:25.703Z",
-  "updatedAt": "2026-10-06T14:03:56.000Z",
+  "updatedAt": "2026-10-06T16:25:53.000Z",
   "baselineDirtyPaths": [],
   "workItems": [
     {
@@ -114,6 +114,55 @@
         }
       },
       "completedAt": "2026-10-06T14:03:56.000Z"
+    },
+    {
+      "id": "WI-0003",
+      "type": "mechanical",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "implementation",
+          "path": ".echelon/toolchain.json"
+        },
+        {
+          "type": "implementation",
+          "path": ".echelon/ros.json"
+        },
+        {
+          "type": "implementation",
+          "path": ".echelon/sde.json"
+        },
+        {
+          "type": "implementation",
+          "path": "conditor.json"
+        }
+      ],
+      "updatedAt": "2026-10-06T16:25:53.000Z",
+      "telemetryExecutionIds": [
+        "EXE-20261006T162507386Z-f37c2674"
+      ],
+      "latestCheckpoint": {
+        "id": "b03399f5086d193fc725afb2",
+        "recordedAt": "2026-10-06T16:25:52.000Z",
+        "executionId": "EXE-20261006T162507386Z-f37c2674",
+        "repository": "echelon-foundry",
+        "branch": "chore/praxis-3.7.2-final",
+        "commit": "9f12a4ff8072492305a0af702ece4d21373dd707",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-foundry"
+        },
+        "remoteBranch": "chore/praxis-3.7.2-final",
+        "remoteCommit": "9f12a4ff8072492305a0af702ece4d21373dd707",
+        "summary": "toolchain upgrade applied, verified, pushed",
+        "nextAction": "complete, PR",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      },
+      "completedAt": "2026-10-06T16:25:53.000Z"
     }
   ]
 }
