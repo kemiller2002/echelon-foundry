@@ -4,7 +4,7 @@
   "repository": "echelon-foundry",
   "actor": "anthropic/claude-code",
   "startedAt": "2026-10-06T12:27:25.703Z",
-  "updatedAt": "2026-10-06T12:27:41.000Z",
+  "updatedAt": "2026-10-06T12:28:01.000Z",
   "baselineDirtyPaths": [],
   "workItems": [
     {
@@ -24,13 +24,51 @@
     {
       "id": "WI-0001",
       "type": "mechanical",
-      "state": "active",
-      "semanticState": "active",
-      "evidence": [],
-      "updatedAt": "2026-10-06T12:27:41.000Z",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "implementation",
+          "path": ".echelon/ros.json"
+        },
+        {
+          "type": "implementation",
+          "path": ".echelon/sde.json"
+        },
+        {
+          "type": "documentation",
+          "path": "AGENTS.md"
+        },
+        {
+          "type": "tests",
+          "path": ".github/workflows/praxis-validation.yml"
+        }
+      ],
+      "updatedAt": "2026-10-06T12:28:01.000Z",
       "telemetryExecutionIds": [
         "EXE-20261006T122742331Z-0b4e9000"
-      ]
+      ],
+      "latestCheckpoint": {
+        "id": "43ec59ae7f7dff61934b8137",
+        "recordedAt": "2026-10-06T12:28:00.000Z",
+        "executionId": "EXE-20261006T122742331Z-0b4e9000",
+        "repository": "echelon-foundry",
+        "branch": "chore/praxis-3.7.1",
+        "commit": "087aa6cf75175cb48566f2966459563ceb638239",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-foundry"
+        },
+        "remoteBranch": "chore/praxis-3.7.1",
+        "remoteCommit": "087aa6cf75175cb48566f2966459563ceb638239",
+        "summary": "Praxis 3.7.1 and Ordo 1.4.0 installed, verified, pushed",
+        "nextAction": "complete, PR",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      },
+      "completedAt": "2026-10-06T12:28:01.000Z"
     }
   ]
 }
