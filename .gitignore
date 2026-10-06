@@ -1,2 +1,5 @@
 dist/
 .visual-engineering/
+
+# Praxis transient locks
+.ros/locks/
