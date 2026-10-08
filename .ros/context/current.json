@@ -4,7 +4,7 @@
   "repository": "echelon-foundry",
   "actor": "anthropic/claude-code",
   "startedAt": "2026-10-06T12:27:25.703Z",
-  "updatedAt": "2026-10-06T16:25:53.000Z",
+  "updatedAt": "2026-10-08T07:31:24.454Z",
   "baselineDirtyPaths": [],
   "workItems": [
     {
@@ -163,6 +163,60 @@
         }
       },
       "completedAt": "2026-10-06T16:25:53.000Z"
+    },
+    {
+      "id": "WI-0004",
+      "type": "task",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "implementation",
+          "path": "conditor.json"
+        },
+        {
+          "type": "implementation",
+          "path": ".conditor/lock.json"
+        },
+        {
+          "type": "implementation",
+          "path": ".conditor/authority/resolved-release-set.json"
+        },
+        {
+          "type": "implementation",
+          "path": ".echelon/toolchain.json"
+        },
+        {
+          "type": "tests",
+          "path": ".github/workflows/praxis-validation.yml"
+        }
+      ],
+      "updatedAt": "2026-10-08T07:31:24.454Z",
+      "telemetryExecutionIds": [
+        "EXE-20261008T071628280Z-0a4eb122"
+      ],
+      "latestCheckpoint": {
+        "id": "2e16f2ac0a6b96e439dfb9c4",
+        "recordedAt": "2026-10-08T07:31:22.301Z",
+        "executionId": "EXE-20261008T071628280Z-0a4eb122",
+        "repository": "echelon-foundry",
+        "branch": "chore/ordo-1.5.0",
+        "commit": "e68cc3fbfde23fc28809a0125ee4aa3f66551aa8",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-foundry"
+        },
+        "remoteBranch": "chore/ordo-1.5.0",
+        "remoteCommit": "e68cc3fbfde23fc28809a0125ee4aa3f66551aa8",
+        "summary": "conditor upgrade --current to echelon-current 1.2.0 (Ordo 1.4.2 -> 1.5.0) committed and pushed; local checks passed",
+        "nextAction": "Open the PR, get CI green and merge",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      },
+      "completedAt": "2026-10-08T07:31:24.454Z",
+      "conclusion": "Ordo 1.5.0 through echelon-current 1.2.0; local checks passed (log: /tmp/claude-0/-home-user-praxis/7bcb3038-90cc-534e-8e5b-9be62aa1de8c/scratchpad/sweep/logs/echelon-foundry.log)"
     }
   ]
 }

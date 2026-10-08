@@ -1,19 +1,19 @@
 {
   "schemaVersion": 4,
   "project": "echelon-foundry",
-  "manifestSha256": "f1049abe0186177920bf9d08f12ba1a903b19ad07e429f765a93a6a7bfa1fcb4",
+  "manifestSha256": "e45d26f0bc6a79f7fdc0aed32c13269c5206f2a28f275e3fb1467ffff61084b3",
   "manifest": {
     "schemaVersion": 1,
     "name": "echelon-foundry",
     "registryAuthority": {
       "kind": "resolved-release-set",
       "path": ".conditor/authority/resolved-release-set.json",
-      "sha256": "cd8d8d0482c5c4750f4bb31d28bc79e9597d3be4f6264955691e3aebd86cb6d2"
+      "sha256": "ea1b39a003d3f2f41c4fb6e979694ec82fd03964854e5dd268e38df51cd22931"
     },
     "components": [
       {
         "id": "ordo",
-        "version": "1.4.2",
+        "version": "1.5.0",
         "required": true
       },
       {
@@ -30,12 +30,12 @@
   "components": [
     {
       "id": "ordo",
-      "version": "1.4.2",
+      "version": "1.5.0",
       "distribution": "host-tool",
       "package": "ordo",
-      "descriptorSha256": "ee057aa4a0c4cd5180269fd262e5570ff6146035e52fd6d17a0baede0df21f5c",
+      "descriptorSha256": "cac222af525161218391dade23d2a583c29315e8df255ffb9f11f0f2bb4eaf3a",
       "authority": "embedded-component-descriptor",
-      "sourceReference": "host:ordo@1.4.2"
+      "sourceReference": "host:ordo@1.5.0"
     },
     {
       "id": "praxis",
