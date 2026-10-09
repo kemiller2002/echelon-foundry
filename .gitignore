@@ -3,3 +3,12 @@ dist/
 
 # Praxis transient locks
 .ros/locks/
+
+# BEGIN echelon:visual-engineering
+# Installed Visual Engineering context. Refresh it with:
+#   npx @echelon-foundry/visual-engineering init
+.visual-engineering/
+# END echelon:visual-engineering
+
+# Node
+node_modules/

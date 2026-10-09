@@ -123,13 +123,13 @@
     {
       "id": "WI-0006",
       "title": "npm install fails: devDependencies @echelon-foundry/communication-engineering 1.0.0 and @echelon-foundry/print-components 0.3.0 are not published on npm; repin to their canonical sources",
-      "description": null,
+      "description": "Repin communication-engineering 1.0.0 and print-components 0.3.0 to their GitHub release tarballs (not on npm), and initialize Visual Engineering and Communication Engineering, which were declared but never installed, so npm install and npm run echelon:verify pass.",
       "tags": [],
       "priority": "medium",
-      "status": "captured",
+      "status": "complete",
       "attachments": [],
       "createdAt": "2026-10-09T00:36:38.571Z",
-      "updatedAt": "2026-10-09T00:36:38.571Z",
+      "updatedAt": "2026-10-09T01:01:58.000Z",
       "createdBy": "unknown",
       "createdByActor": {
         "kind": "agent",
