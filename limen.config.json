@@ -1,0 +1,8 @@
+{
+  "configurationVersion": 1,
+  "boundary": {
+    "notApplicable": {
+      "rationale": "Static marketing site (DF-ECHELON-FOUNDRY-FND-2026-0001): HTML pages assembled at build time by build.js, plus one progressive-enhancement script (contact.js) that posts the contact form. No browser application, no engine/kernel split and no WebAssembly, so there is no Limen boundary to check. Application state or WASM arriving in the site makes Limen applicable."
+    }
+  }
+}
