@@ -4,7 +4,7 @@
   "repository": "echelon-foundry",
   "actor": "anthropic/claude-code",
   "startedAt": "2026-10-06T12:27:25.703Z",
-  "updatedAt": "2026-10-08T07:31:24.454Z",
+  "updatedAt": "2026-10-09T00:36:54.000Z",
   "baselineDirtyPaths": [],
   "workItems": [
     {
@@ -217,6 +217,68 @@
       },
       "completedAt": "2026-10-08T07:31:24.454Z",
       "conclusion": "Ordo 1.5.0 through echelon-current 1.2.0; local checks passed (log: /tmp/claude-0/-home-user-praxis/7bcb3038-90cc-534e-8e5b-9be62aa1de8c/scratchpad/sweep/logs/echelon-foundry.log)"
+    },
+    {
+      "id": "WI-0005",
+      "type": "task",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "implementation",
+          "path": "package.json"
+        },
+        {
+          "type": "implementation",
+          "path": ".echelon/limen.json"
+        },
+        {
+          "type": "implementation",
+          "path": ".github/workflows/limen-verify.yml"
+        },
+        {
+          "type": "implementation",
+          "path": "limen.config.json"
+        },
+        {
+          "type": "implementation",
+          "path": "research/decisions/DF-ECHELON-FOUNDRY-FND-2026-0001--limen-boundary-not-applicable-to-a-static-site.md"
+        },
+        {
+          "type": "implementation",
+          "path": "registries/decisions.json"
+        },
+        {
+          "type": "tests",
+          "path": ".github/workflows/limen-verify.yml"
+        }
+      ],
+      "updatedAt": "2026-10-09T00:36:54.000Z",
+      "telemetryExecutionIds": [
+        "EXE-20261009T003517293Z-62e2d751"
+      ],
+      "latestCheckpoint": {
+        "id": "f48d1038fd25f316f15b816c",
+        "recordedAt": "2026-10-09T00:36:53.000Z",
+        "executionId": "EXE-20261009T003517293Z-62e2d751",
+        "repository": "echelon-foundry",
+        "branch": "chore/limen-0.9.0",
+        "commit": "886305a5dd5f3e6e96d6edb0fec9bf5e68f1f41f",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-foundry"
+        },
+        "remoteBranch": "chore/limen-0.9.0",
+        "remoteCommit": "886305a5dd5f3e6e96d6edb0fec9bf5e68f1f41f",
+        "summary": "Limen 0.9.0 installed with an honest not-applicable boundary; stale dependency removed",
+        "nextAction": "Merge the PR once every check on the head SHA passes",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      },
+      "completedAt": "2026-10-09T00:36:54.000Z",
+      "conclusion": "Limen 0.9.0 set up; verify --strict and npm run echelon:limen:verify pass with verdict not-applicable (DF-ECHELON-FOUNDRY-FND-2026-0001)"
     }
   ]
 }

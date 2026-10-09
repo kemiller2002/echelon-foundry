@@ -1,1 +1,48 @@
-[]
+[
+  {
+    "confidence": "high",
+    "created": "2026-10-09",
+    "created_by_agent": "claude",
+    "decision_type": "applicability",
+    "evidence": [],
+    "id": "DF-ECHELON-FOUNDRY-FND-2026-0001",
+    "path": "research/decisions/DF-ECHELON-FOUNDRY-FND-2026-0001--limen-boundary-not-applicable-to-a-static-site.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261009T003517293Z-62e2d751": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-10-09T00:36:39.006Z",
+          "operations": [
+            "created"
+          ],
+          "reason": "Declare the Limen boundary not applicable while setting up Limen 0.9.0"
+        }
+      }
+    },
+    "related_documents": [
+      "limen.config.json",
+      ".echelon/limen.json",
+      ".github/workflows/limen-verify.yml",
+      "package.json",
+      "build.js",
+      "contact.js"
+    ],
+    "status": "accepted",
+    "superseded_by": [],
+    "supersedes": [],
+    "tags": [
+      "governance",
+      "foundations",
+      "limen",
+      "applicability"
+    ],
+    "title": "The Limen boundary is not applicable to the Echelon Foundry site, a static marketing site with no engine, kernel or WebAssembly",
+    "updated": "2026-10-09"
+  }
+]

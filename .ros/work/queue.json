@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "repository": "echelon-foundry",
-  "nextSeq": 5,
+  "nextSeq": 7,
   "items": [
     {
       "id": "WI-0001",
@@ -88,6 +88,48 @@
       "attachments": [],
       "createdAt": "2026-10-08T07:16:27.246Z",
       "updatedAt": "2026-10-08T07:31:24.454Z",
+      "createdBy": "unknown",
+      "createdByActor": {
+        "kind": "agent",
+        "id": "anthropic/claude-code",
+        "provider": "anthropic",
+        "model": "unknown",
+        "runtime": "claude-code"
+      },
+      "source": "manual",
+      "sourceReference": null
+    },
+    {
+      "id": "WI-0005",
+      "title": "Set up Limen 0.9.0 (not-applicable boundary) and drop the stale typescript-wasm-kernel 0.6.2 dependency",
+      "description": null,
+      "tags": [],
+      "priority": "medium",
+      "status": "complete",
+      "attachments": [],
+      "createdAt": "2026-10-09T00:35:16.284Z",
+      "updatedAt": "2026-10-09T00:36:54.000Z",
+      "createdBy": "unknown",
+      "createdByActor": {
+        "kind": "agent",
+        "id": "anthropic/claude-code",
+        "provider": "anthropic",
+        "model": "unknown",
+        "runtime": "claude-code"
+      },
+      "source": "manual",
+      "sourceReference": null
+    },
+    {
+      "id": "WI-0006",
+      "title": "npm install fails: devDependencies @echelon-foundry/communication-engineering 1.0.0 and @echelon-foundry/print-components 0.3.0 are not published on npm; repin to their canonical sources",
+      "description": null,
+      "tags": [],
+      "priority": "medium",
+      "status": "captured",
+      "attachments": [],
+      "createdAt": "2026-10-09T00:36:38.571Z",
+      "updatedAt": "2026-10-09T00:36:38.571Z",
       "createdBy": "unknown",
       "createdByActor": {
         "kind": "agent",
