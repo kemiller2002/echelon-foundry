@@ -102,32 +102,38 @@ for (const width of CONTRACT_WIDTHS) {
 // --- Every link destination is meaningful (ULI-A01) --------------------------
 
 for (const route of ROUTES) {
-  test(`${route.path} link destinations are valid`, async ({ page, request }) => {
-    annotate("uli-surface", route.id);
-    await page.goto(route.path);
+  // One test per action so a defect is attributed to the action it affects.
+  test.describe(`${route.path} link destinations`, () => {
     for (const action of declaredActionsFor(route)) {
-      annotate("uli-destination", `${action.surfaceId}/${action.id}`);
-      const control = page.getByRole(action.control.role, { name: action.control.name, exact: typeof action.control.name === "string" });
-      if (action.kind === "navigate") {
-        await expect(control).toHaveAttribute("href", action.destination);
-        expect((await request.get(action.destination)).status(), `${action.destination}`).toBe(200);
-      }
-      if (action.kind === "anchor") {
-        await expect(control).toHaveAttribute("href", action.destination);
-        await expect(page.locator(action.destination)).toHaveCount(1);
-      }
-      if (action.kind === "external") {
-        await expect(control).toHaveAttribute("href", action.destination);
-        expect(new URL(action.destination).protocol).toBe("https:");
-        await expect(control).toHaveAttribute("target", "_blank");
-        await expect(control).toHaveAttribute("rel", /\bnoopener\b/);
-        await expect(control).toHaveAttribute("rel", /\bnoreferrer\b/);
-        await expect(control).toHaveAccessibleName(/\(opens in a new tab\)$/);
-      }
-      if (action.kind === "mailto") {
-        await expect(control).toHaveAttribute("href", /^mailto:[^@\s]+@[^@\s]+\.[a-z]{2,}$/);
-        await expect(control).toHaveAttribute("href", action.destination);
-      }
+      test(`${action.surfaceId}/${action.id} is valid`, async ({ page, request }) => {
+        annotate("uli-destination", `${action.surfaceId}/${action.id}`);
+        await page.goto(route.path);
+        const control = page.getByRole(action.control.role, { name: action.control.name, exact: typeof action.control.name === "string" });
+        if (action.kind === "navigate") {
+          await expect(control).toHaveAttribute("href", action.destination);
+          expect((await request.get(action.destination)).status(), `${action.destination}`).toBe(200);
+        }
+        if (action.kind === "anchor") {
+          await expect(control).toHaveAttribute("href", action.destination);
+          await expect(page.locator(action.destination)).toHaveCount(1);
+        }
+        if (action.kind === "external") {
+          await expect(control).toHaveAttribute("href", action.destination);
+          expect(new URL(action.destination).protocol).toBe("https:");
+          await expect(control).toHaveAttribute("target", "_blank");
+          await expect(control).toHaveAttribute("rel", /\bnoopener\b/);
+          await expect(control).toHaveAttribute("rel", /\bnoreferrer\b/);
+          await expect(control).toHaveAccessibleName(/\(opens in a new tab\)$/);
+        }
+        if (action.kind === "mailto") {
+          await expect(control).toHaveAttribute("href", /^mailto:[^@\s]+@[^@\s]+\.[a-z]{2,}$/);
+          await expect(control).toHaveAttribute("href", action.destination);
+        }
+        if (action.kind === "form") {
+          await expect(control).toHaveAttribute("type", "submit");
+          await expect(control).toBeEnabled();
+        }
+      });
     }
   });
 
