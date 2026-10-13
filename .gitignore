@@ -12,3 +12,6 @@ dist/
 
 # Node
 node_modules/
+
+# Playwright UI conformance output (evidence is uploaded by CI)
+test-results/

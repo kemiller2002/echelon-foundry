@@ -61,10 +61,11 @@ function buildPages() {
       content = content.replace("{{caseStudyCards}}", renderCaseStudyCards(caseStudies));
     }
 
-    writePage(page.output, renderDocument(page.title, content));
+    const document = renderDocument(page.title, content, page.output);
+    writePage(page.output, document);
 
     for (const alias of page.aliases || []) {
-      writePage(alias, renderDocument(page.title, content));
+      writePage(alias, document);
     }
   }
 }
@@ -86,19 +87,32 @@ function buildCaseStudies() {
 
     const output = path.join("case-studies", study.slug, "index.html");
     const alias = path.join("case-studies", `${study.slug}.html`);
-    const document = renderDocument(study.title, content);
+    const document = renderDocument(study.title, content, output);
     writePage(output, document);
     writePage(alias, document);
   }
 }
 
-function renderDocument(title, content) {
+function renderDocument(title, content, output) {
   const footer = footerTemplate.replaceAll("{{year}}", String(new Date().getFullYear()));
   return layoutTemplate
     .replace("{{title}}", escapeHtml(title))
-    .replace("{{header}}", headerTemplate)
+    .replace("{{header}}", markCurrentNavigation(headerTemplate, routeOf(output)))
     .replace("{{footer}}", footer)
     .replace("{{content}}", content);
+}
+
+// "about/index.html" -> "/about/"; "index.html" -> "/".
+function routeOf(output) {
+  const directory = path.dirname(output).split(path.sep).join("/");
+  return directory === "." ? "/" : `/${directory}/`;
+}
+
+// Mark the primary navigation link for the current page so location is
+// announced (aria-current) and shown (styled in style.css).
+function markCurrentNavigation(header, route) {
+  return header.replace(/<nav>[\s\S]*?<\/nav>/, (nav) =>
+    nav.replace(new RegExp(`<a href="${route}"`), `<a href="${route}" aria-current="page"`));
 }
 
 function renderCaseStudyCards(studies) {
