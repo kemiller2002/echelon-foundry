@@ -2,6 +2,7 @@
 
 | ID | Work | Status | Tags | Priority |
 |---|---|---|---|---|
+| GH-11 | Assess and adopt universal UI layout/action conformance (visual-engineering/UI-LAYOUT-INTERACTION@1.0.0) | ready |  | high |
 | ROS-INSTALL-3-7-1 | ROS-INSTALL-3-7-1 | complete |  |  |
 | WI-0001 | Govern echelon-foundry with Praxis 3.7.1 and Ordo 1.4.0 | complete | praxis, ordo, toolchain | medium |
 | WI-0002 | Move echelon-foundry to Ordo 1.4.1 | complete | ordo, toolchain | medium |
