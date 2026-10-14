@@ -1,0 +1,1167 @@
+{
+  "standardVersion": "1.0.0",
+  "repository": "kemiller2002/echelon-foundry",
+  "revision": "494fc80803fed1fa1def12fb83e24c8541667896",
+  "classification": "site-ui",
+  "surfaces": [
+    {
+      "id": "chrome",
+      "path": "/* (shared header and footer on every route)",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [
+        {
+          "id": "primary-nav",
+          "relation": "centerline",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Home"
+            },
+            {
+              "role": "link",
+              "name": "About"
+            },
+            {
+              "role": "link",
+              "name": "Research"
+            },
+            {
+              "role": "link",
+              "name": "HelixNote"
+            },
+            {
+              "role": "link",
+              "name": "Let's talk"
+            }
+          ],
+          "rationale": "ULI-L10: Primary navigation is one row of peer destinations in source order at every contract width (declared at 320, 390, 768, 1280px)",
+          "evidence": [
+            "status: fail",
+            "failed: chromium > site.spec.mjs > chrome: primary-nav aligns at 320px (test/ui-conformance/site.spec.mjs:195)",
+            "failed: chromium > site.spec.mjs > chrome: primary-nav aligns at 390px (test/ui-conformance/site.spec.mjs:195)",
+            "passed: chromium > site.spec.mjs > chrome: primary-nav aligns at 768px (test/ui-conformance/site.spec.mjs:195)",
+            "passed: chromium > site.spec.mjs > chrome: primary-nav aligns at 1280px (test/ui-conformance/site.spec.mjs:195)"
+          ]
+        },
+        {
+          "id": "footer-actions-row",
+          "relation": "centerline",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Schedule a working session"
+            },
+            {
+              "role": "link",
+              "name": "kevin@echelonfoundry.com"
+            }
+          ],
+          "rationale": "ULI-L10: Footer actions share a row on wide layouts (declared at 1280px)",
+          "evidence": [
+            "status: pass",
+            "passed: chromium > site.spec.mjs > chrome: footer-actions-row aligns at 1280px (test/ui-conformance/site.spec.mjs:195)"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "id": "skip-link",
+          "control": {
+            "role": "link",
+            "name": "Skip to main content"
+          },
+          "intent": "Move to #main-content",
+          "expectedOutcome": "URL hash becomes #main-content and the destination is in view below the sticky header",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > chrome: skip-link reaches #main-content (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > chrome: skip-link reaches #main-content (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/skip-link is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/skip-link is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/skip-link is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > chrome/skip-link is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/skip-link is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/concrete-forensics/ link destinations > chrome/skip-link is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/financial-platform-diagnostic/ link destinations > chrome/skip-link is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/organizational-throughput/ link destinations > chrome/skip-link is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/fintech-investment/ link destinations > chrome/skip-link is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "brand-home",
+          "control": {
+            "role": "link",
+            "name": "Echelon / Foundry"
+          },
+          "intent": "Navigate to /",
+          "expectedOutcome": "URL becomes / and the destination's heading \"AI made software faster. We’re engineering what makes it trustworthy.\" is shown",
+          "status": "fail",
+          "evidence": [
+            "failed: chromium > site.spec.mjs > navigation outcomes at 390px > chrome: brand-home reaches / (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > chrome: brand-home reaches / (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/brand-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/brand-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/brand-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > chrome/brand-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/brand-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/concrete-forensics/ link destinations > chrome/brand-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/financial-platform-diagnostic/ link destinations > chrome/brand-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/organizational-throughput/ link destinations > chrome/brand-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/fintech-investment/ link destinations > chrome/brand-home is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "nav-home",
+          "control": {
+            "role": "link",
+            "name": "Home"
+          },
+          "intent": "Navigate to /",
+          "expectedOutcome": "URL becomes / and the destination's heading \"AI made software faster. We’re engineering what makes it trustworthy.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > chrome: nav-home reaches / (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > chrome: nav-home reaches / (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > chrome/nav-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/concrete-forensics/ link destinations > chrome/nav-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/financial-platform-diagnostic/ link destinations > chrome/nav-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/organizational-throughput/ link destinations > chrome/nav-home is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/fintech-investment/ link destinations > chrome/nav-home is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "nav-about",
+          "control": {
+            "role": "link",
+            "name": "About"
+          },
+          "intent": "Navigate to /about/",
+          "expectedOutcome": "URL becomes /about/ and the destination's heading \"Kevin Miller, founder of Echelon Foundry\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > chrome: nav-about reaches /about/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > chrome: nav-about reaches /about/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-about is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-about is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-about is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > chrome/nav-about is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-about is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/concrete-forensics/ link destinations > chrome/nav-about is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/financial-platform-diagnostic/ link destinations > chrome/nav-about is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/organizational-throughput/ link destinations > chrome/nav-about is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/fintech-investment/ link destinations > chrome/nav-about is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "nav-research",
+          "control": {
+            "role": "link",
+            "name": "Research"
+          },
+          "intent": "Navigate to /research/",
+          "expectedOutcome": "URL becomes /research/ and the destination's heading \"We research the hard parts. Then we build them.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > chrome: nav-research reaches /research/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > chrome: nav-research reaches /research/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-research is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-research is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-research is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > chrome/nav-research is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-research is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/concrete-forensics/ link destinations > chrome/nav-research is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/financial-platform-diagnostic/ link destinations > chrome/nav-research is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/organizational-throughput/ link destinations > chrome/nav-research is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/fintech-investment/ link destinations > chrome/nav-research is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "nav-helixnote",
+          "control": {
+            "role": "link",
+            "name": "HelixNote"
+          },
+          "intent": "Navigate to /helixnote/",
+          "expectedOutcome": "URL becomes /helixnote/ and the destination's heading \"A communication framework for complex decisions.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > chrome: nav-helixnote reaches /helixnote/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > chrome: nav-helixnote reaches /helixnote/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-helixnote is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-helixnote is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-helixnote is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > chrome/nav-helixnote is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-helixnote is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/concrete-forensics/ link destinations > chrome/nav-helixnote is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/financial-platform-diagnostic/ link destinations > chrome/nav-helixnote is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/organizational-throughput/ link destinations > chrome/nav-helixnote is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/fintech-investment/ link destinations > chrome/nav-helixnote is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "nav-contact",
+          "control": {
+            "role": "link",
+            "name": "Let's talk"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the destination's heading \"Let's talk\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > chrome: nav-contact reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > chrome: nav-contact reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > chrome/nav-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/concrete-forensics/ link destinations > chrome/nav-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/financial-platform-diagnostic/ link destinations > chrome/nav-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/organizational-throughput/ link destinations > chrome/nav-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/fintech-investment/ link destinations > chrome/nav-contact is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "footer-contact",
+          "control": {
+            "role": "link",
+            "name": "Schedule a working session"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the destination's heading \"Let's talk\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > chrome: footer-contact reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > chrome: footer-contact reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/footer-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/footer-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/footer-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > chrome/footer-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/footer-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/concrete-forensics/ link destinations > chrome/footer-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/financial-platform-diagnostic/ link destinations > chrome/footer-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/organizational-throughput/ link destinations > chrome/footer-contact is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/fintech-investment/ link destinations > chrome/footer-contact is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "footer-email",
+          "control": {
+            "role": "link",
+            "name": "kevin@echelonfoundry.com"
+          },
+          "intent": "Compose mail to kevin@echelonfoundry.com",
+          "expectedOutcome": "href is mailto:kevin@echelonfoundry.com (the mail client is outside the page; delivery is not claimed)",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > chrome: footer-email points at mailto:kevin@echelonfoundry.com (test/ui-conformance/site.spec.mjs:179)",
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/footer-email is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/footer-email is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/footer-email is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > chrome/footer-email is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/footer-email is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/concrete-forensics/ link destinations > chrome/footer-email is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/financial-platform-diagnostic/ link destinations > chrome/footer-email is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/organizational-throughput/ link destinations > chrome/footer-email is valid (test/ui-conformance/site.spec.mjs:108)",
+            "passed: chromium > site.spec.mjs > /case-studies/fintech-investment/ link destinations > chrome/footer-email is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        }
+      ],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > / renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px > /about/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px > /research/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px > /helixnote/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px > /contact/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/concrete-forensics/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/financial-platform-diagnostic/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/organizational-throughput/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/fintech-investment/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > / renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /about/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /research/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /helixnote/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /contact/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/concrete-forensics/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/financial-platform-diagnostic/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/organizational-throughput/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/fintech-investment/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 768px > / renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 768px > /about/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 768px > /research/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 768px > /helixnote/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 768px > /contact/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/concrete-forensics/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/financial-platform-diagnostic/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/organizational-throughput/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/fintech-investment/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 1280px > / renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 1280px > /about/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 1280px > /research/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 1280px > /helixnote/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 1280px > /contact/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/concrete-forensics/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/financial-platform-diagnostic/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/organizational-throughput/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/fintech-investment/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > every chrome action is reachable by keyboard (test/ui-conformance/site.spec.mjs:305)",
+        "alignment group footer-actions-stack (left-edge; not expressible in the schema 1.0.0 relation enum) status pass: ULI-L10: Footer actions stack on one left edge at and below 900px (declared at 320, 390, 768px); peers link \"Schedule a working session\", link \"kevin@echelonfoundry.com\"; 3 measurement(s): passed: chromium > site.spec.mjs > chrome: footer-actions-stack aligns at 320px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > chrome: footer-actions-stack aligns at 390px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > chrome: footer-actions-stack aligns at 768px (test/ui-conformance/site.spec.mjs:195)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted."
+      ]
+    },
+    {
+      "id": "home",
+      "path": "/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [
+        {
+          "id": "hero-actions-row",
+          "relation": "top-edge",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Book a working session"
+            },
+            {
+              "role": "link",
+              "name": "See the body of work"
+            }
+          ],
+          "rationale": "ULI-L10: Hero calls to action share one row above 680px (declared at 768, 1280px)",
+          "evidence": [
+            "status: pass",
+            "passed: chromium > site.spec.mjs > home: hero-actions-row aligns at 768px (test/ui-conformance/site.spec.mjs:195)",
+            "passed: chromium > site.spec.mjs > home: hero-actions-row aligns at 1280px (test/ui-conformance/site.spec.mjs:195)"
+          ]
+        },
+        {
+          "id": "hero-actions-row-height",
+          "relation": "bottom-edge",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Book a working session"
+            },
+            {
+              "role": "link",
+              "name": "See the body of work"
+            }
+          ],
+          "rationale": "ULI-L02: Hero calls to action have equal intrinsic height in their row (declared at 768, 1280px)",
+          "evidence": [
+            "status: pass",
+            "passed: chromium > site.spec.mjs > home: hero-actions-row-height aligns at 768px (test/ui-conformance/site.spec.mjs:195)",
+            "passed: chromium > site.spec.mjs > home: hero-actions-row-height aligns at 1280px (test/ui-conformance/site.spec.mjs:195)"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "id": "home-helixnote-chip",
+          "control": {
+            "role": "link",
+            "name": "HelixNote integrated ->"
+          },
+          "intent": "Navigate to /helixnote/",
+          "expectedOutcome": "URL becomes /helixnote/ and the destination's heading \"A communication framework for complex decisions.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-helixnote-chip reaches /helixnote/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-helixnote-chip reaches /helixnote/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-helixnote-chip is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-book-session",
+          "control": {
+            "role": "link",
+            "name": "Book a working session"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the destination's heading \"Let's talk\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-book-session reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-book-session reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-book-session is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-see-work",
+          "control": {
+            "role": "link",
+            "name": "See the body of work"
+          },
+          "intent": "Move to #casework",
+          "expectedOutcome": "URL hash becomes #casework and the destination is in view below the sticky header",
+          "status": "fail",
+          "evidence": [
+            "failed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-see-work reaches #casework (test/ui-conformance/site.spec.mjs:157)",
+            "failed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-see-work reaches #casework (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-see-work is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-culinary",
+          "control": {
+            "role": "link",
+            "name": "Explore Echelon Foundry Culinary (opens in a new tab)"
+          },
+          "intent": "Open https://culinary.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://culinary.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > home: home-culinary points at https://culinary.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-culinary is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-explore-research",
+          "control": {
+            "role": "link",
+            "name": "Explore the research"
+          },
+          "intent": "Navigate to /research/",
+          "expectedOutcome": "URL becomes /research/ and the destination's heading \"We research the hard parts. Then we build them.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-explore-research reaches /research/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-explore-research reaches /research/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-explore-research is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-research-ai",
+          "control": {
+            "role": "link",
+            "name": "Visit AI Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://ai.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://ai.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "fail",
+          "evidence": [
+            "failed: chromium > site.spec.mjs > home: home-research-ai points at https://ai.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "failed: chromium > site.spec.mjs > / link destinations > home/home-research-ai is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-research-communication",
+          "control": {
+            "role": "link",
+            "name": "Visit Communication Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://communication.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://communication.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "fail",
+          "evidence": [
+            "failed: chromium > site.spec.mjs > home: home-research-communication points at https://communication.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "failed: chromium > site.spec.mjs > / link destinations > home/home-research-communication is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-research-framework",
+          "control": {
+            "role": "link",
+            "name": "Visit Framework Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://framework.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://framework.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "fail",
+          "evidence": [
+            "failed: chromium > site.spec.mjs > home: home-research-framework points at https://framework.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "failed: chromium > site.spec.mjs > / link destinations > home/home-research-framework is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-research-software",
+          "control": {
+            "role": "link",
+            "name": "Visit Software Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://software.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://software.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "fail",
+          "evidence": [
+            "failed: chromium > site.spec.mjs > home: home-research-software points at https://software.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "failed: chromium > site.spec.mjs > / link destinations > home/home-research-software is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-research-visual",
+          "control": {
+            "role": "link",
+            "name": "Visit Visual Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://visual.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://visual.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "fail",
+          "evidence": [
+            "failed: chromium > site.spec.mjs > home: home-research-visual points at https://visual.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "failed: chromium > site.spec.mjs > / link destinations > home/home-research-visual is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-case-concrete-forensics",
+          "control": {
+            "role": "link",
+            "name": "/^Applied Diagnostics Concrete Forensics: Diagnosing Failure in Plain Sight/"
+          },
+          "intent": "Navigate to /case-studies/concrete-forensics/",
+          "expectedOutcome": "URL becomes /case-studies/concrete-forensics/ and the destination's heading \"Concrete Forensics: Diagnosing Failure in Plain Sight\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-case-concrete-forensics reaches /case-studies/concrete-forensics/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-case-concrete-forensics reaches /case-studies/concrete-forensics/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-case-concrete-forensics is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-case-financial-platform-diagnostic",
+          "control": {
+            "role": "link",
+            "name": "/^Applied Diagnostics Financial Platform Diagnostic: Rebuilding Trust Through Systemic Clarity/"
+          },
+          "intent": "Navigate to /case-studies/financial-platform-diagnostic/",
+          "expectedOutcome": "URL becomes /case-studies/financial-platform-diagnostic/ and the destination's heading \"Financial Platform Diagnostic: Rebuilding Trust Through Systemic Clarity\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-case-financial-platform-diagnostic reaches /case-studies/financial-platform-diagnostic/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-case-financial-platform-diagnostic reaches /case-studies/financial-platform-diagnostic/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-case-financial-platform-diagnostic is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-case-organizational-throughput",
+          "control": {
+            "role": "link",
+            "name": "/^Applied Diagnostics Organizational Throughput Diagnostic: Restoring Flow in a High-Complexity Environment/"
+          },
+          "intent": "Navigate to /case-studies/organizational-throughput/",
+          "expectedOutcome": "URL becomes /case-studies/organizational-throughput/ and the destination's heading \"Organizational Throughput Diagnostic: Restoring Flow in a High-Complexity Environment\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-case-organizational-throughput reaches /case-studies/organizational-throughput/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-case-organizational-throughput reaches /case-studies/organizational-throughput/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-case-organizational-throughput is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-case-fintech-investment",
+          "control": {
+            "role": "link",
+            "name": "/^Applied Diagnostics Investment Due Diligence: Integrating Technical Reality With Financial Outcomes/"
+          },
+          "intent": "Navigate to /case-studies/fintech-investment/",
+          "expectedOutcome": "URL becomes /case-studies/fintech-investment/ and the destination's heading \"Investment Due Diligence: Integrating Technical Reality With Financial Outcomes\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-case-fintech-investment reaches /case-studies/fintech-investment/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-case-fintech-investment reaches /case-studies/fintech-investment/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-case-fintech-investment is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-explore-helixnote",
+          "control": {
+            "role": "link",
+            "name": "Explore HelixNote"
+          },
+          "intent": "Navigate to /helixnote/",
+          "expectedOutcome": "URL becomes /helixnote/ and the destination's heading \"A communication framework for complex decisions.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-explore-helixnote reaches /helixnote/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-explore-helixnote reaches /helixnote/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-explore-helixnote is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-start-diagnostic",
+          "control": {
+            "role": "link",
+            "name": "Start a diagnostic"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the destination's heading \"Let's talk\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-start-diagnostic reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-start-diagnostic reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-start-diagnostic is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "home-meet-founder",
+          "control": {
+            "role": "link",
+            "name": "Meet the founder"
+          },
+          "intent": "Navigate to /about/",
+          "expectedOutcome": "URL becomes /about/ and the destination's heading \"Kevin Miller, founder of Echelon Foundry\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > home: home-meet-founder reaches /about/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > home: home-meet-founder reaches /about/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-meet-founder is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        }
+      ],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > / renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px > / renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > / renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 390px > / renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 768px > / renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 768px > / renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 1280px > / renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 1280px > / renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > / reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > / reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 768px with 200% text > / reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > / reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 320px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 390px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 768px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 1280px (test/ui-conformance/site.spec.mjs:85)",
+        "passed: chromium > site.spec.mjs > forced colors keep filled controls bounded and navigation visible (test/ui-conformance/site.spec.mjs:332)",
+        "passed: chromium > site.spec.mjs > reduced motion removes smooth scrolling and transitions (test/ui-conformance/site.spec.mjs:324)",
+        "alignment group hero-actions-stack (left-edge; not expressible in the schema 1.0.0 relation enum) status pass: ULI-L10: Hero calls to action stack on one shared left edge at and below 680px (declared at 320, 390px); peers link \"Book a working session\", link \"See the body of work\"; 2 measurement(s): passed: chromium > site.spec.mjs > home: hero-actions-stack aligns at 320px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > home: hero-actions-stack aligns at 390px (test/ui-conformance/site.spec.mjs:195)",
+        "alignment group hero-actions-stack-width (right-edge; not expressible in the schema 1.0.0 relation enum) status fail: ULI-L02: Hero calls to action are equal-width full-row targets when stacked (declared at 320, 390px); peers link \"Book a working session\", link \"See the body of work\"; 2 measurement(s): failed: chromium > site.spec.mjs > home: hero-actions-stack-width aligns at 320px (test/ui-conformance/site.spec.mjs:195); failed: chromium > site.spec.mjs > home: hero-actions-stack-width aligns at 390px (test/ui-conformance/site.spec.mjs:195)",
+        "alignment group closing-actions-left (left-edge; not expressible in the schema 1.0.0 relation enum) status fail: ULI-L10: Closing calls to action stack in the heading's side column (declared at 320, 390, 768, 1280px); peers link \"Start a diagnostic\", link \"Meet the founder\"; 4 measurement(s): passed: chromium > site.spec.mjs > home: closing-actions-left aligns at 320px (test/ui-conformance/site.spec.mjs:195); failed: chromium > site.spec.mjs > home: closing-actions-left aligns at 390px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > home: closing-actions-left aligns at 768px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > home: closing-actions-left aligns at 1280px (test/ui-conformance/site.spec.mjs:195)",
+        "alignment group closing-actions-right (right-edge; not expressible in the schema 1.0.0 relation enum) status fail: ULI-L02: Closing calls to action stack in the heading's side column; equal width (declared at 320, 390, 768, 1280px); peers link \"Start a diagnostic\", link \"Meet the founder\"; 4 measurement(s): failed: chromium > site.spec.mjs > home: closing-actions-right aligns at 320px (test/ui-conformance/site.spec.mjs:195); failed: chromium > site.spec.mjs > home: closing-actions-right aligns at 390px (test/ui-conformance/site.spec.mjs:195); failed: chromium > site.spec.mjs > home: closing-actions-right aligns at 768px (test/ui-conformance/site.spec.mjs:195); failed: chromium > site.spec.mjs > home: closing-actions-right aligns at 1280px (test/ui-conformance/site.spec.mjs:195)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted."
+      ]
+    },
+    {
+      "id": "about",
+      "path": "/about/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > /about/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px > /about/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /about/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 390px > /about/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /about/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 768px > /about/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 1280px > /about/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 1280px > /about/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /about/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /about/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 768px with 200% text > /about/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /about/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 320px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 390px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 768px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 1280px (test/ui-conformance/site.spec.mjs:85)",
+        "passed: chromium > site.spec.mjs > legacy alias /about.html serves /about/ (test/ui-conformance/site.spec.mjs:141)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted."
+      ]
+    },
+    {
+      "id": "research",
+      "path": "/research/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [
+        {
+          "id": "research-ai",
+          "control": {
+            "role": "link",
+            "name": "Visit AI Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://ai.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://ai.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > research: research-ai points at https://ai.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > research/research-ai is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "research-communication",
+          "control": {
+            "role": "link",
+            "name": "Visit Communication Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://communication.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://communication.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > research: research-communication points at https://communication.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > research/research-communication is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "research-framework",
+          "control": {
+            "role": "link",
+            "name": "Visit Framework Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://framework.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://framework.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > research: research-framework points at https://framework.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > research/research-framework is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "research-software",
+          "control": {
+            "role": "link",
+            "name": "Visit Software Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://software.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://software.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > research: research-software points at https://software.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > research/research-software is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "research-visual",
+          "control": {
+            "role": "link",
+            "name": "Visit Visual Engineering research (opens in a new tab)"
+          },
+          "intent": "Open https://visual.echelonfoundry.com/ in a new tab",
+          "expectedOutcome": "href is https://visual.echelonfoundry.com/, opens in a new tab with rel=\"noopener noreferrer\", and the name announces the new tab",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > research: research-visual points at https://visual.echelonfoundry.com/ (test/ui-conformance/site.spec.mjs:179)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > research/research-visual is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "research-start-conversation",
+          "control": {
+            "role": "link",
+            "name": "Start a conversation"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the destination's heading \"Let's talk\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > research: research-start-conversation reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > research: research-start-conversation reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > research/research-start-conversation is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        }
+      ],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > /research/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px > /research/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /research/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /research/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 768px > /research/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /research/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "passed: chromium > site.spec.mjs > at 1280px > /research/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 1280px > /research/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /research/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /research/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 768px with 200% text > /research/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /research/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 320px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 390px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 768px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 1280px (test/ui-conformance/site.spec.mjs:85)",
+        "passed: chromium > site.spec.mjs > legacy alias /research.html serves /research/ (test/ui-conformance/site.spec.mjs:141)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted."
+      ]
+    },
+    {
+      "id": "helixnote",
+      "path": "/helixnote/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [
+        {
+          "id": "helixnote-actions-row",
+          "relation": "top-edge",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Discuss HelixNote"
+            },
+            {
+              "role": "link",
+              "name": "Apply it to your domain"
+            }
+          ],
+          "rationale": "ULI-L10: HelixNote calls to action share one row above 680px (declared at 768, 1280px)",
+          "evidence": [
+            "status: pass",
+            "passed: chromium > site.spec.mjs > helixnote: helixnote-actions-row aligns at 768px (test/ui-conformance/site.spec.mjs:195)",
+            "passed: chromium > site.spec.mjs > helixnote: helixnote-actions-row aligns at 1280px (test/ui-conformance/site.spec.mjs:195)"
+          ]
+        },
+        {
+          "id": "helixnote-actions-row-height",
+          "relation": "bottom-edge",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Discuss HelixNote"
+            },
+            {
+              "role": "link",
+              "name": "Apply it to your domain"
+            }
+          ],
+          "rationale": "ULI-L02: HelixNote calls to action have equal intrinsic height in their row (declared at 768, 1280px)",
+          "evidence": [
+            "status: pass",
+            "passed: chromium > site.spec.mjs > helixnote: helixnote-actions-row-height aligns at 768px (test/ui-conformance/site.spec.mjs:195)",
+            "passed: chromium > site.spec.mjs > helixnote: helixnote-actions-row-height aligns at 1280px (test/ui-conformance/site.spec.mjs:195)"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "id": "helixnote-discuss",
+          "control": {
+            "role": "link",
+            "name": "Discuss HelixNote"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the destination's heading \"Let's talk\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > helixnote: helixnote-discuss reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > helixnote: helixnote-discuss reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > helixnote/helixnote-discuss is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        },
+        {
+          "id": "helixnote-apply",
+          "control": {
+            "role": "link",
+            "name": "Apply it to your domain"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the destination's heading \"Let's talk\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > navigation outcomes at 390px > helixnote: helixnote-apply reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > navigation outcomes at 1280px > helixnote: helixnote-apply reaches /contact/ (test/ui-conformance/site.spec.mjs:157)",
+            "passed: chromium > site.spec.mjs > /helixnote/ link destinations > helixnote/helixnote-apply is valid (test/ui-conformance/site.spec.mjs:108)"
+          ]
+        }
+      ],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > /helixnote/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px > /helixnote/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 390px > /helixnote/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 390px > /helixnote/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /helixnote/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 768px > /helixnote/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 1280px > /helixnote/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 1280px > /helixnote/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /helixnote/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /helixnote/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 768px with 200% text > /helixnote/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 1280px with 200% text > /helixnote/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 320px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 390px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 768px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 1280px (test/ui-conformance/site.spec.mjs:85)",
+        "passed: chromium > site.spec.mjs > legacy alias /helixnote.html serves /helixnote/ (test/ui-conformance/site.spec.mjs:141)",
+        "alignment group helixnote-actions-stack (left-edge; not expressible in the schema 1.0.0 relation enum) status pass: ULI-L10: HelixNote calls to action stack on one shared left edge at and below 680px (declared at 320, 390px); peers link \"Discuss HelixNote\", link \"Apply it to your domain\"; 2 measurement(s): passed: chromium > site.spec.mjs > helixnote: helixnote-actions-stack aligns at 320px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > helixnote: helixnote-actions-stack aligns at 390px (test/ui-conformance/site.spec.mjs:195)",
+        "alignment group helixnote-actions-stack-width (right-edge; not expressible in the schema 1.0.0 relation enum) status fail: ULI-L02: HelixNote calls to action are equal-width full-row targets when stacked (declared at 320, 390px); peers link \"Discuss HelixNote\", link \"Apply it to your domain\"; 2 measurement(s): failed: chromium > site.spec.mjs > helixnote: helixnote-actions-stack-width aligns at 320px (test/ui-conformance/site.spec.mjs:195); failed: chromium > site.spec.mjs > helixnote: helixnote-actions-stack-width aligns at 390px (test/ui-conformance/site.spec.mjs:195)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted."
+      ]
+    },
+    {
+      "id": "contact",
+      "path": "/contact/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [
+        {
+          "id": "contact-send",
+          "control": {
+            "role": "button",
+            "name": "Send"
+          },
+          "intent": "Submit the inquiry to the inquiry worker",
+          "expectedOutcome": "Sending state while pending; on success the status reads the received message and the form clears; on failure the error is shown, entries are kept and the form can be resubmitted",
+          "status": "fail",
+          "evidence": [
+            "failed: chromium > site.spec.mjs > contact form > an empty submission is blocked by native validation and sends nothing (test/ui-conformance/site.spec.mjs:241)",
+            "failed: chromium > site.spec.mjs > contact form > a failed submission keeps the entries, reports the error and recovers on retry (test/ui-conformance/site.spec.mjs:253)",
+            "failed: chromium > site.spec.mjs > contact form > a network failure is reported as an error, never as success (test/ui-conformance/site.spec.mjs:291)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > contact/contact-send is valid (test/ui-conformance/site.spec.mjs:108)"
+          ],
+          "resetStrategy": "Reload /contact/; the worker endpoint is intercepted in tests so no real inquiry is sent"
+        }
+      ],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > /contact/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px > /contact/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /contact/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 390px > /contact/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 768px > /contact/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /contact/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "passed: chromium > site.spec.mjs > at 1280px > /contact/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 1280px > /contact/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /contact/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /contact/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 768px with 200% text > /contact/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /contact/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 320px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 390px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 768px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 1280px (test/ui-conformance/site.spec.mjs:85)",
+        "passed: chromium > site.spec.mjs > legacy alias /contact.html serves /contact/ (test/ui-conformance/site.spec.mjs:141)",
+        "passed: chromium > site.spec.mjs > the contact form is operable by keyboard (test/ui-conformance/site.spec.mjs:315)",
+        "alignment group contact-fields (left-edge; not expressible in the schema 1.0.0 relation enum) status pass: ULI-L01: Stacked form fields and their submit share the form's left edge (declared at 320, 390, 768, 1280px); peers textbox \"Your name\", textbox \"Email\", textbox \"How can we help?\", button \"Send\"; 4 measurement(s): passed: chromium > site.spec.mjs > contact: contact-fields aligns at 320px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > contact: contact-fields aligns at 390px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > contact: contact-fields aligns at 768px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > contact: contact-fields aligns at 1280px (test/ui-conformance/site.spec.mjs:195)",
+        "alignment group contact-field-width (right-edge; not expressible in the schema 1.0.0 relation enum) status pass: ULI-L02: Peer fields have one width (declared at 320, 390, 768, 1280px); peers textbox \"Your name\", textbox \"Email\", textbox \"How can we help?\"; 4 measurement(s): passed: chromium > site.spec.mjs > contact: contact-field-width aligns at 320px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > contact: contact-field-width aligns at 390px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > contact: contact-field-width aligns at 768px (test/ui-conformance/site.spec.mjs:195); passed: chromium > site.spec.mjs > contact: contact-field-width aligns at 1280px (test/ui-conformance/site.spec.mjs:195)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted.",
+        "The real inquiry worker is intercepted in tests; delivery to the worker and its persistence are not verified.",
+        "Behaviour without JavaScript (the form has no action URL) is not covered."
+      ]
+    },
+    {
+      "id": "case-concrete-forensics",
+      "path": "/case-studies/concrete-forensics/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/concrete-forensics/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/concrete-forensics/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/concrete-forensics/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/concrete-forensics/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/concrete-forensics/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/concrete-forensics/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/concrete-forensics/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/concrete-forensics/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /case-studies/concrete-forensics/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /case-studies/concrete-forensics/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 768px with 200% text > /case-studies/concrete-forensics/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /case-studies/concrete-forensics/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 320px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 390px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 768px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 1280px (test/ui-conformance/site.spec.mjs:85)",
+        "passed: chromium > site.spec.mjs > legacy alias /case-studies/concrete-forensics.html serves /case-studies/concrete-forensics/ (test/ui-conformance/site.spec.mjs:141)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted."
+      ]
+    },
+    {
+      "id": "case-financial-platform-diagnostic",
+      "path": "/case-studies/financial-platform-diagnostic/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/financial-platform-diagnostic/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/financial-platform-diagnostic/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/financial-platform-diagnostic/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/financial-platform-diagnostic/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/financial-platform-diagnostic/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/financial-platform-diagnostic/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/financial-platform-diagnostic/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/financial-platform-diagnostic/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /case-studies/financial-platform-diagnostic/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /case-studies/financial-platform-diagnostic/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 768px with 200% text > /case-studies/financial-platform-diagnostic/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /case-studies/financial-platform-diagnostic/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 320px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 390px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 768px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 1280px (test/ui-conformance/site.spec.mjs:85)",
+        "passed: chromium > site.spec.mjs > legacy alias /case-studies/financial-platform-diagnostic.html serves /case-studies/financial-platform-diagnostic/ (test/ui-conformance/site.spec.mjs:141)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted."
+      ]
+    },
+    {
+      "id": "case-organizational-throughput",
+      "path": "/case-studies/organizational-throughput/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/organizational-throughput/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/organizational-throughput/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/organizational-throughput/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/organizational-throughput/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/organizational-throughput/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/organizational-throughput/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/organizational-throughput/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/organizational-throughput/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /case-studies/organizational-throughput/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /case-studies/organizational-throughput/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 768px with 200% text > /case-studies/organizational-throughput/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /case-studies/organizational-throughput/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 320px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 390px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 768px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 1280px (test/ui-conformance/site.spec.mjs:85)",
+        "passed: chromium > site.spec.mjs > legacy alias /case-studies/organizational-throughput.html serves /case-studies/organizational-throughput/ (test/ui-conformance/site.spec.mjs:141)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted."
+      ]
+    },
+    {
+      "id": "case-fintech-investment",
+      "path": "/case-studies/fintech-investment/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [],
+      "evidence": [
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/fintech-investment/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 320px > /case-studies/fintech-investment/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/fintech-investment/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "failed: chromium > site.spec.mjs > at 390px > /case-studies/fintech-investment/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/fintech-investment/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "passed: chromium > site.spec.mjs > at 768px > /case-studies/fintech-investment/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/fintech-investment/ renders only declared actions (test/ui-conformance/site.spec.mjs:51)",
+        "passed: chromium > site.spec.mjs > at 1280px > /case-studies/fintech-investment/ renders without overflow, with intact navigation labels (test/ui-conformance/site.spec.mjs:38)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /case-studies/fintech-investment/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /case-studies/fintech-investment/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > at 768px with 200% text > /case-studies/fintech-investment/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /case-studies/fintech-investment/ reflows without overflow (test/ui-conformance/site.spec.mjs:71)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 320px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 390px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 768px (test/ui-conformance/site.spec.mjs:85)",
+        "failed: chromium > site.spec.mjs > every route starts its content at the same distance below the header at 1280px (test/ui-conformance/site.spec.mjs:85)",
+        "passed: chromium > site.spec.mjs > legacy alias /case-studies/fintech-investment.html serves /case-studies/fintech-investment/ (test/ui-conformance/site.spec.mjs:141)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Long labels beyond the shipped content are not injected.",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations is not verified; only their href, target and rel are asserted."
+      ]
+    }
+  ],
+  "exceptions": [],
+  "notes": "Contract visual-engineering/UI-LAYOUT-INTERACTION@1.0.0 (kemiller2002/visual-engineering@8da8fbc). Helpers: @echelon-foundry/forma-conformance 0.1.0 vendored from kemiller2002/forma@f66dba6. Generated by npm run ui:conformance; statuses derive only from executed Playwright tests."
+}

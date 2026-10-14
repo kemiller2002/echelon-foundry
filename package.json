@@ -8,12 +8,15 @@
     "echelon:visual:verify": "visual-engineering verify --strict",
     "echelon:communication:verify": "communication-engineering verify --strict",
     "echelon:limen:verify": "npx --yes \"@echelon-foundry/limen@$(node -p \"require('./.echelon/limen.json').installedVersion\")\" verify --strict",
-    "echelon:verify": "npm run echelon:visual:verify && npm run echelon:communication:verify && npm run echelon:limen:verify"
+    "echelon:verify": "npm run echelon:visual:verify && npm run echelon:communication:verify && npm run echelon:limen:verify",
+    "ui:conformance": "npm run build && playwright test --config=playwright.ui-conformance.config.mjs && node test/ui-conformance/validate-evidence.mjs"
   },
   "devDependencies": {
     "@echelon-foundry/communication-engineering": "https://github.com/kemiller2002/communication-engineering/releases/download/v1.0.0/echelon-foundry-communication-engineering-1.0.0.tgz",
     "@echelon-foundry/design-system": "0.2.0",
     "@echelon-foundry/print-components": "https://github.com/kemiller2002/folio/releases/download/v0.3.0/echelon-foundry-print-components-0.3.0.tgz",
-    "@echelon-foundry/visual-engineering": "1.0.0"
+    "@echelon-foundry/visual-engineering": "1.0.0",
+    "@playwright/test": "1.56.1",
+    "ajv": "8.17.1"
   }
 }
