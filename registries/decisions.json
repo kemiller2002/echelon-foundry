@@ -1,6 +1,50 @@
 [
   {
     "confidence": "high",
+    "created": "2026-11-26",
+    "created_by_agent": "claude",
+    "decision_type": "engineering-standard",
+    "evidence": [],
+    "id": "DF-ECHELON-FOUNDRY-ENG-2026-6BEA",
+    "path": "research/decisions/DF-ECHELON-FOUNDRY-ENG-2026-6BEA--reproducible-fsharp-research-models.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261126T203550039Z-7002e716": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-26T20:39:43Z",
+          "operations": [
+            "created"
+          ],
+          "reason": "WI-0007: progress DAF Phase II implication (XRI-015/XRI-016) as a draft standard"
+        }
+      }
+    },
+    "related_documents": [
+      "DF-ECHELON-FOUNDRY-MTH-2026-48F0",
+      "docs/methodology-proposals/README.md"
+    ],
+    "status": "draft",
+    "superseded_by": [],
+    "supersedes": [],
+    "tags": [
+      "engineering-standards",
+      "research-models",
+      "fsharp",
+      "reproducibility",
+      "model-validation",
+      "proposal"
+    ],
+    "title": "Proposed engineering standard - durable research and economic models are F# programs with byte-identical reproduction and register validation commands",
+    "updated": "2026-11-26"
+  },
+  {
+    "confidence": "high",
     "created": "2026-10-09",
     "created_by_agent": "claude",
     "decision_type": "applicability",
@@ -44,5 +88,49 @@
     ],
     "title": "The Limen boundary is not applicable to the Echelon Foundry site, a static marketing site with no engine, kernel or WebAssembly",
     "updated": "2026-10-09"
+  },
+  {
+    "confidence": "medium",
+    "created": "2026-11-26",
+    "created_by_agent": "claude",
+    "decision_type": "methodology-standard",
+    "evidence": [],
+    "id": "DF-ECHELON-FOUNDRY-MTH-2026-48F0",
+    "path": "research/decisions/DF-ECHELON-FOUNDRY-MTH-2026-48F0--event-level-economics-costing-method.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261126T203550039Z-7002e716": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-26T20:39:43Z",
+          "operations": [
+            "created"
+          ],
+          "reason": "WI-0007: progress DAF Phase II implication (XRI-015/XRI-016) as a draft standard"
+        }
+      }
+    },
+    "related_documents": [
+      "DF-ECHELON-FOUNDRY-ENG-2026-6BEA",
+      "docs/methodology-proposals/README.md"
+    ],
+    "status": "draft",
+    "superseded_by": [],
+    "supersedes": [],
+    "tags": [
+      "methodology",
+      "economics",
+      "costing",
+      "ai-native",
+      "enterprise-design",
+      "proposal"
+    ],
+    "title": "Proposed standard - cost AI-native enterprise designs with event-level economics that separate design effects from AI effects",
+    "updated": "2026-11-26"
   }
 ]

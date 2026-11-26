@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "repository": "echelon-foundry",
-  "nextSeq": 7,
+  "nextSeq": 8,
   "items": [
     {
       "id": "WI-0001",
@@ -161,6 +161,27 @@
       },
       "source": "github",
       "sourceReference": "https://github.com/kemiller2002/echelon-foundry/issues/11"
+    },
+    {
+      "id": "WI-0007",
+      "title": "DAF Phase III Stage I: record XRI-015 (event-level economics costing) and XRI-016 (reproducible F# research models) as draft decision records; methodology proposals for Clarity/EDF",
+      "description": null,
+      "tags": [],
+      "priority": "medium",
+      "status": "ready",
+      "attachments": [],
+      "createdAt": "2026-11-26T20:35:44.196Z",
+      "updatedAt": "2026-11-26T20:35:49Z",
+      "createdBy": "unknown",
+      "createdByActor": {
+        "kind": "agent",
+        "id": "anthropic/claude-code",
+        "provider": "anthropic",
+        "model": "unknown",
+        "runtime": "claude-code"
+      },
+      "source": "manual",
+      "sourceReference": null
     }
   ]
 }
