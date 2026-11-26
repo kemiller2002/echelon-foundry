@@ -26,6 +26,16 @@ provenance:
         model: unknown
         runtime: claude-code
       reason: "WI-0007: progress DAF Phase II implication (XRI-015/XRI-016) as a draft standard"
+    EXE-20261126T210049621Z-520ec706:
+      operations: [modified]
+      at: 2026-11-26T21:00:57Z
+      actor:
+        kind: agent
+        id: anthropic/claude-code
+        provider: anthropic
+        model: unknown
+        runtime: claude-code
+      reason: "WI-0008: correct origin repository visibility (daf-landscape is public)"
 ---
 
 # DF-ECHELON-FOUNDRY-ENG-2026-6BEA: Reproducible F# research models
@@ -34,7 +44,7 @@ provenance:
 - **Status:** draft (proposed standard note; not accepted)
 - **Decision type:** engineering standard
 - **Work item:** WI-0007
-- **Origin:** cross-repository implication XRI-016 (`kemiller2002/daf-landscape`, private, commit `10b92f4`:
+- **Origin:** cross-repository implication XRI-016 (`kemiller2002/daf-landscape`, public, commit `10b92f4`:
   `research/competitive-displacement/19-echelon-foundry-implications.md` section 2,
   `research/competitive-displacement/model/README.md`, `data/registers/cross-repository-implications.csv` row
   XRI-016, source SRC-063). XRI-016 was registered as "standard-note, informational": it records existing

@@ -26,6 +26,16 @@ provenance:
         model: unknown
         runtime: claude-code
       reason: "WI-0007: progress DAF Phase II implication (XRI-015/XRI-016) as a draft standard"
+    EXE-20261126T210049621Z-520ec706:
+      operations: [modified]
+      at: 2026-11-26T21:00:57Z
+      actor:
+        kind: agent
+        id: anthropic/claude-code
+        provider: anthropic
+        model: unknown
+        runtime: claude-code
+      reason: "WI-0008: correct origin repository visibility (daf-landscape is public)"
 ---
 
 # DF-ECHELON-FOUNDRY-MTH-2026-48F0: Event-level economics as the standard costing method for AI-native enterprise designs
@@ -35,7 +45,7 @@ provenance:
 - **Decision type:** methodology standard
 - **Work item:** WI-0007
 - **Origin:** cross-repository implication XRI-015 from the DAF Landscape Phase II research
-  (`kemiller2002/daf-landscape`, private, commit `10b92f4`:
+  (`kemiller2002/daf-landscape`, public, commit `10b92f4`:
   `research/competitive-displacement/19-echelon-foundry-implications.md` section 2,
   `research/competitive-displacement/09-event-level-operating-model.md` section 1,
   `data/registers/cross-repository-implications.csv` row XRI-015, source SRC-063).

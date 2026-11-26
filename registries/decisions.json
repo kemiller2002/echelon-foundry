@@ -22,6 +22,20 @@
             "created"
           ],
           "reason": "WI-0007: progress DAF Phase II implication (XRI-015/XRI-016) as a draft standard"
+        },
+        "EXE-20261126T210049621Z-520ec706": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-26T21:00:57Z",
+          "operations": [
+            "modified"
+          ],
+          "reason": "WI-0008: correct origin repository visibility (daf-landscape is public)"
         }
       }
     },
@@ -112,6 +126,20 @@
             "created"
           ],
           "reason": "WI-0007: progress DAF Phase II implication (XRI-015/XRI-016) as a draft standard"
+        },
+        "EXE-20261126T210049621Z-520ec706": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-26T21:00:57Z",
+          "operations": [
+            "modified"
+          ],
+          "reason": "WI-0008: correct origin repository visibility (daf-landscape is public)"
         }
       }
     },

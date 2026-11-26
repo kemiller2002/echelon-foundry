@@ -7,7 +7,7 @@ needs that are not specific to donor-advised funds. This page evaluates them aga
 already provide, and records proposals. Nothing here is DAF-specific logic, and nothing here changes Clarity or
 EDF: those repositories are read-only for this initiative, so their proposals are recorded here for their owners.
 
-Origin: `kemiller2002/daf-landscape` (private) commit `10b92f4`, `research/competitive-displacement/` reports
+Origin: `kemiller2002/daf-landscape` (public) commit `10b92f4`, `research/competitive-displacement/` reports
 19 and 23 and `data/registers/cross-repository-implications.csv` (XRI-015..XRI-018).
 
 ## Evaluation
@@ -78,6 +78,17 @@ adverse stress cases; reconciliation with any prior estimate of the same quantit
 exists, a back-test of predicted against observed values with the tolerance that triggers re-estimation.
 
 **Acceptance.** Each decision-supporting model has the five items, or records why one is not applicable.
+
+## Ownership of the work recorded here
+
+Owner decision OD-DAF-IP-001 (2026-11-26), recorded in the private `kemiller2002/echelon-organization-administration`
+repository (`strategy/daf-entry/02-economic-entity-separation.md`): "EF owns all property we make", that is,
+Echelon Foundry owns the intellectual property the initiative creates, including methodology and research
+models such as those proposed here. This note records the owner's intent; it does not assert legal effect.
+
+**TODO (counsel):** this repository's `LICENSE` names an individual as copyright holder, not Echelon Foundry.
+Whether and how that should change (and any contributor assignment instruments) is for counsel and the owner;
+`LICENSE` is not edited here.
 
 ## Status
 
