@@ -4,7 +4,7 @@
   "repository": "echelon-foundry",
   "actor": "anthropic/claude-code",
   "startedAt": "2026-10-06T12:27:25.703Z",
-  "updatedAt": "2026-11-27T02:33:17Z",
+  "updatedAt": "2026-11-27T02:44:42Z",
   "baselineDirtyPaths": [],
   "workItems": [
     {
@@ -467,13 +467,43 @@
     {
       "id": "WI-0009",
       "type": "feature",
-      "state": "active",
-      "semanticState": "active",
-      "evidence": [],
-      "updatedAt": "2026-11-27T02:33:17Z",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "implementation",
+          "path": ".github/workflows/site-checks.yml"
+        },
+        {
+          "type": "tests",
+          "path": "test/ui-conformance/site.spec.mjs"
+        }
+      ],
+      "updatedAt": "2026-11-27T02:44:42Z",
       "telemetryExecutionIds": [
         "EXE-20261127T023317354Z-c70b896a"
-      ]
+      ],
+      "latestCheckpoint": {
+        "id": "934829fb14809de4ac9f6a57",
+        "recordedAt": "2026-11-27T02:44:41Z",
+        "executionId": "EXE-20261127T023317354Z-c70b896a",
+        "repository": "echelon-foundry",
+        "branch": "claude/fervent-galileo-bj4yk0",
+        "commit": "f372c8931d0281e9319d39dfa00b0afda5523d62",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-foundry"
+        },
+        "remoteBranch": "claude/fervent-galileo-bj4yk0",
+        "remoteCommit": "f372c8931d0281e9319d39dfa00b0afda5523d62",
+        "summary": "Standards accepted and CI runner pinned; pushed",
+        "nextAction": "Complete WI-0009; confirm CI on PR #13",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      },
+      "completedAt": "2026-11-27T02:44:42Z"
     }
   ]
 }
