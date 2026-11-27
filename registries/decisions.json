@@ -1,6 +1,78 @@
 [
   {
     "confidence": "high",
+    "created": "2026-11-26",
+    "created_by_agent": "claude",
+    "decision_type": "engineering-standard",
+    "evidence": [],
+    "id": "DF-ECHELON-FOUNDRY-ENG-2026-6BEA",
+    "path": "research/decisions/DF-ECHELON-FOUNDRY-ENG-2026-6BEA--reproducible-fsharp-research-models.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261126T203550039Z-7002e716": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-26T20:39:43Z",
+          "operations": [
+            "created"
+          ],
+          "reason": "WI-0007: progress DAF Phase II implication (XRI-015/XRI-016) as a draft standard"
+        },
+        "EXE-20261126T210049621Z-520ec706": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-26T21:00:57Z",
+          "operations": [
+            "modified"
+          ],
+          "reason": "WI-0008: correct origin repository visibility (daf-landscape is public)"
+        },
+        "EXE-20261127T023317354Z-c70b896a": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-27T02:34:09Z",
+          "operations": [
+            "modified"
+          ],
+          "reason": "WI-0009: record owner ratification (2026-11-27, PR #13): status draft -> accepted; validation gates preserved"
+        }
+      }
+    },
+    "related_documents": [
+      "DF-ECHELON-FOUNDRY-MTH-2026-48F0",
+      "docs/methodology-proposals/README.md"
+    ],
+    "status": "accepted",
+    "superseded_by": [],
+    "supersedes": [],
+    "tags": [
+      "engineering-standards",
+      "research-models",
+      "fsharp",
+      "reproducibility",
+      "model-validation",
+      "proposal"
+    ],
+    "title": "Engineering standard - durable research and economic models are F# programs with byte-identical reproduction and register validation commands",
+    "updated": "2026-11-27"
+  },
+  {
+    "confidence": "high",
     "created": "2026-10-09",
     "created_by_agent": "claude",
     "decision_type": "applicability",
@@ -44,5 +116,77 @@
     ],
     "title": "The Limen boundary is not applicable to the Echelon Foundry site, a static marketing site with no engine, kernel or WebAssembly",
     "updated": "2026-10-09"
+  },
+  {
+    "confidence": "medium",
+    "created": "2026-11-26",
+    "created_by_agent": "claude",
+    "decision_type": "methodology-standard",
+    "evidence": [],
+    "id": "DF-ECHELON-FOUNDRY-MTH-2026-48F0",
+    "path": "research/decisions/DF-ECHELON-FOUNDRY-MTH-2026-48F0--event-level-economics-costing-method.md",
+    "provenance": {
+      "contributions": {
+        "EXE-20261126T203550039Z-7002e716": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-26T20:39:43Z",
+          "operations": [
+            "created"
+          ],
+          "reason": "WI-0007: progress DAF Phase II implication (XRI-015/XRI-016) as a draft standard"
+        },
+        "EXE-20261126T210049621Z-520ec706": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-26T21:00:57Z",
+          "operations": [
+            "modified"
+          ],
+          "reason": "WI-0008: correct origin repository visibility (daf-landscape is public)"
+        },
+        "EXE-20261127T023317354Z-c70b896a": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-27T02:34:09Z",
+          "operations": [
+            "modified"
+          ],
+          "reason": "WI-0009: record owner ratification (2026-11-27, PR #13): status draft -> accepted; validation gates preserved"
+        }
+      }
+    },
+    "related_documents": [
+      "DF-ECHELON-FOUNDRY-ENG-2026-6BEA",
+      "docs/methodology-proposals/README.md"
+    ],
+    "status": "accepted",
+    "superseded_by": [],
+    "supersedes": [],
+    "tags": [
+      "methodology",
+      "economics",
+      "costing",
+      "ai-native",
+      "enterprise-design",
+      "proposal"
+    ],
+    "title": "Standard - cost AI-native enterprise designs with event-level economics that separate design effects from AI effects, with zero-based costing and separate incremental cash and fully loaded views",
+    "updated": "2026-11-27"
   }
 ]

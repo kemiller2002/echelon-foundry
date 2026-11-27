@@ -4,7 +4,7 @@
   "repository": "echelon-foundry",
   "actor": "anthropic/claude-code",
   "startedAt": "2026-10-06T12:27:25.703Z",
-  "updatedAt": "2026-10-13T22:25:25.000Z",
+  "updatedAt": "2026-11-27T02:44:42Z",
   "baselineDirtyPaths": [],
   "workItems": [
     {
@@ -379,6 +379,131 @@
       },
       "completedAt": "2026-10-13T22:25:25.000Z",
       "conclusion": "Site classified site-ui; baseline defects fixed at source; 330/330 conformance tests pass in Chromium; evidence schema-valid; PR #12 CI green (test, ui-conformance, validate, limen-verify)"
+    },
+    {
+      "id": "WI-0007",
+      "type": "research",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "research-record",
+          "path": "research/decisions/DF-ECHELON-FOUNDRY-MTH-2026-48F0--event-level-economics-costing-method.md"
+        },
+        {
+          "type": "research-record",
+          "path": "research/decisions/DF-ECHELON-FOUNDRY-ENG-2026-6BEA--reproducible-fsharp-research-models.md"
+        },
+        {
+          "type": "research-record",
+          "path": "docs/methodology-proposals/README.md"
+        }
+      ],
+      "updatedAt": "2026-11-26T20:40:07Z",
+      "telemetryExecutionIds": [
+        "EXE-20261126T203550039Z-7002e716"
+      ],
+      "latestCheckpoint": {
+        "id": "cc774dcd9ed6c229235c12b3",
+        "recordedAt": "2026-11-26T20:40:07Z",
+        "executionId": "EXE-20261126T203550039Z-7002e716",
+        "repository": "echelon-foundry",
+        "branch": "claude/fervent-galileo-bj4yk0",
+        "commit": "4cf919441503eef191f4d30eb616c902eafdb1e6",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-foundry"
+        },
+        "remoteBranch": "claude/fervent-galileo-bj4yk0",
+        "remoteCommit": "4cf919441503eef191f4d30eb616c902eafdb1e6",
+        "summary": "Draft DF records for XRI-015/016 and methodology proposals committed and pushed",
+        "nextAction": "Complete WI-0007; owner to accept or reject the two draft standards",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      },
+      "completedAt": "2026-11-26T20:40:07Z",
+      "conclusion": "inconclusive"
+    },
+    {
+      "id": "WI-0008",
+      "type": "research",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "research-record",
+          "path": "docs/methodology-proposals/README.md"
+        }
+      ],
+      "updatedAt": "2026-11-26T21:01:07Z",
+      "telemetryExecutionIds": [
+        "EXE-20261126T210049621Z-520ec706"
+      ],
+      "latestCheckpoint": {
+        "id": "d47faf336468f706182d2c7b",
+        "recordedAt": "2026-11-26T21:01:06Z",
+        "executionId": "EXE-20261126T210049621Z-520ec706",
+        "repository": "echelon-foundry",
+        "branch": "claude/fervent-galileo-bj4yk0",
+        "commit": "1071e25986c51f6a2c5150e0b78261a57fc975ee",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-foundry"
+        },
+        "remoteBranch": "claude/fervent-galileo-bj4yk0",
+        "remoteCommit": "1071e25986c51f6a2c5150e0b78261a57fc975ee",
+        "summary": "Review fixes committed and pushed",
+        "nextAction": "Complete WI-0008",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      },
+      "completedAt": "2026-11-26T21:01:07Z",
+      "conclusion": "inconclusive"
+    },
+    {
+      "id": "WI-0009",
+      "type": "feature",
+      "state": "complete",
+      "semanticState": "complete",
+      "evidence": [
+        {
+          "type": "implementation",
+          "path": ".github/workflows/site-checks.yml"
+        },
+        {
+          "type": "tests",
+          "path": "test/ui-conformance/site.spec.mjs"
+        }
+      ],
+      "updatedAt": "2026-11-27T02:44:42Z",
+      "telemetryExecutionIds": [
+        "EXE-20261127T023317354Z-c70b896a"
+      ],
+      "latestCheckpoint": {
+        "id": "934829fb14809de4ac9f6a57",
+        "recordedAt": "2026-11-27T02:44:41Z",
+        "executionId": "EXE-20261127T023317354Z-c70b896a",
+        "repository": "echelon-foundry",
+        "branch": "claude/fervent-galileo-bj4yk0",
+        "commit": "f372c8931d0281e9319d39dfa00b0afda5523d62",
+        "remote": {
+          "name": "origin",
+          "url": "https://github.com/kemiller2002/echelon-foundry"
+        },
+        "remoteBranch": "claude/fervent-galileo-bj4yk0",
+        "remoteCommit": "f372c8931d0281e9319d39dfa00b0afda5523d62",
+        "summary": "Standards accepted and CI runner pinned; pushed",
+        "nextAction": "Complete WI-0009; confirm CI on PR #13",
+        "verification": {
+          "status": "verified",
+          "mechanism": "git-remote-observation"
+        }
+      },
+      "completedAt": "2026-11-27T02:44:42Z"
     }
   ]
 }

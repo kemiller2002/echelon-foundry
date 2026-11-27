@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "repository": "echelon-foundry",
-  "nextSeq": 7,
+  "nextSeq": 10,
   "items": [
     {
       "id": "WI-0001",
@@ -161,6 +161,69 @@
       },
       "source": "github",
       "sourceReference": "https://github.com/kemiller2002/echelon-foundry/issues/11"
+    },
+    {
+      "id": "WI-0007",
+      "title": "DAF Phase III Stage I: record XRI-015 (event-level economics costing) and XRI-016 (reproducible F# research models) as draft decision records; methodology proposals for Clarity/EDF",
+      "description": null,
+      "tags": [],
+      "priority": "medium",
+      "status": "complete",
+      "attachments": [],
+      "createdAt": "2026-11-26T20:35:44.196Z",
+      "updatedAt": "2026-11-26T20:40:07Z",
+      "createdBy": "unknown",
+      "createdByActor": {
+        "kind": "agent",
+        "id": "anthropic/claude-code",
+        "provider": "anthropic",
+        "model": "unknown",
+        "runtime": "claude-code"
+      },
+      "source": "manual",
+      "sourceReference": null
+    },
+    {
+      "id": "WI-0008",
+      "title": "DAF Phase III Stage I review fixes: daf-landscape visibility correction and OD-DAF-IP-001 note",
+      "description": null,
+      "tags": [],
+      "priority": "medium",
+      "status": "complete",
+      "attachments": [],
+      "createdAt": "2026-11-26T21:00:48.907Z",
+      "updatedAt": "2026-11-26T21:01:07Z",
+      "createdBy": "unknown",
+      "createdByActor": {
+        "kind": "agent",
+        "id": "anthropic/claude-code",
+        "provider": "anthropic",
+        "model": "unknown",
+        "runtime": "claude-code"
+      },
+      "source": "manual",
+      "sourceReference": null
+    },
+    {
+      "id": "WI-0009",
+      "title": "Ratify XRI-015/016 standards (owner 2026-11-27) with zero-based costing; pin ui-conformance runner to ubuntu-24.04",
+      "description": null,
+      "tags": [],
+      "priority": "medium",
+      "status": "complete",
+      "attachments": [],
+      "createdAt": "2026-11-27T02:33:16.532Z",
+      "updatedAt": "2026-11-27T02:44:42Z",
+      "createdBy": "unknown",
+      "createdByActor": {
+        "kind": "agent",
+        "id": "anthropic/claude-code",
+        "provider": "anthropic",
+        "model": "unknown",
+        "runtime": "claude-code"
+      },
+      "source": "manual",
+      "sourceReference": null
     }
   ]
 }

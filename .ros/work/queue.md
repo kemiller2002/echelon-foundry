@@ -10,3 +10,6 @@
 | WI-0004 | Move echelon-foundry to Ordo 1.5.0 via echelon-current 1.2.0 (conditor upgrade --current) | complete |  | medium |
 | WI-0005 | Set up Limen 0.9.0 (not-applicable boundary) and drop the stale typescript-wasm-kernel 0.6.2 dependency | complete |  | medium |
 | WI-0006 | npm install fails: devDependencies @echelon-foundry/communication-engineering 1.0.0 and @echelon-foundry/print-components 0.3.0 are not published on npm; repin to their canonical sources | complete |  | medium |
+| WI-0007 | DAF Phase III Stage I: record XRI-015 (event-level economics costing) and XRI-016 (reproducible F# research models) as draft decision records; methodology proposals for Clarity/EDF | complete |  | medium |
+| WI-0008 | DAF Phase III Stage I review fixes: daf-landscape visibility correction and OD-DAF-IP-001 note | complete |  | medium |
+| WI-0009 | Ratify XRI-015/016 standards (owner 2026-11-27) with zero-based costing; pin ui-conformance runner to ubuntu-24.04 | complete |  | medium |
