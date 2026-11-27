@@ -1,10 +1,10 @@
 ---
 id: DF-ECHELON-FOUNDRY-MTH-2026-48F0
-title: Proposed standard - cost AI-native enterprise designs with event-level economics that separate design effects from AI effects
-status: draft
+title: Standard - cost AI-native enterprise designs with event-level economics that separate design effects from AI effects, with zero-based costing and separate incremental cash and fully loaded views
+status: accepted
 decision_type: methodology-standard
 created: 2026-11-26
-updated: 2026-11-26
+updated: 2026-11-27
 created_by_agent: claude
 confidence: medium
 supersedes: []
@@ -36,12 +36,26 @@ provenance:
         model: unknown
         runtime: claude-code
       reason: "WI-0008: correct origin repository visibility (daf-landscape is public)"
+    EXE-20261127T023317354Z-c70b896a:
+      operations: [modified]
+      at: 2026-11-27T02:34:09Z
+      actor:
+        kind: agent
+        id: anthropic/claude-code
+        provider: anthropic
+        model: unknown
+        runtime: claude-code
+      reason: "WI-0009: record owner ratification (2026-11-27, PR #13): status draft -> accepted; validation gates preserved"
 ---
 
 # DF-ECHELON-FOUNDRY-MTH-2026-48F0: Event-level economics as the standard costing method for AI-native enterprise designs
 
 - **Date:** 2026-11-26
-- **Status:** draft (proposed standard; not accepted)
+- **Status:** accepted (owner-ratified standard, 2026-11-27); validation gates VR-1..VR-3 preserved and open
+- **Owner ratification:** 2026-11-27. The owner confirmed in session the direction posted on
+  echelon-foundry PR #13: "Owner approves both draft standards for ratification, preserving validation gates.
+  Extend event-level costing with zero-based costing: every expense requires a justified obligation, workload or
+  capacity trigger; separate incremental cash and fully loaded economic costs."
 - **Decision type:** methodology standard
 - **Work item:** WI-0007
 - **Origin:** cross-repository implication XRI-015 from the DAF Landscape Phase II research
@@ -52,7 +66,8 @@ provenance:
 - **Authority:** the repository owner approved the Phase II decisions on 2026-11-26 and authorized progression
   of XRI-001..XRI-018 subject to their documented conditions. XRI-015 was registered there as
   "methodology-candidate, proposed (not approved)". Progression here means recording it as a proposed standard
-  in its target repository. **Accepting it as canonical Echelon methodology is a separate owner decision.**
+  in its target repository. The owner then accepted it as Echelon methodology on 2026-11-27 (see Owner
+  ratification above).
 
 ## Context
 
@@ -65,7 +80,7 @@ AI-assisted minutes instead of scaling no-AI minutes by an AI factor.
 This method is domain-agnostic. It applies to any operating design that can be described as a set of recurring
 operational events.
 
-## Proposed decision
+## Decision
 
 Echelon Foundry costs AI-native enterprise designs at the level of **operational events**, not departments or
 headcount. For each event *e* and operating mode *m*, per unit of volume:
@@ -94,6 +109,16 @@ Rules:
 6. **Attribution is reported.** Results state how much of any modelled saving comes from design levers and how
    much from AI levers.
 
+7. **Zero-based costing (owner amendment, 2026-11-27).** No cost is carried forward or assumed from a prior
+   budget, headcount or department. Every expense, labour or otherwise, is included only with a stated
+   justification: the **obligation** (legal, contractual or control requirement), **workload** (event volume
+   times minutes) or **capacity trigger** (a threshold at which a fixed cost becomes necessary) that causes it.
+   An expense with no stated trigger is excluded and listed as unjustified.
+8. **Two cost views (owner amendment, 2026-11-27).** Results report **incremental cash** (cash the design
+   actually causes) separately from **fully loaded economic cost** (including the cost of shared resources and
+   unpaid or founder time). Shared costs enter the fully loaded view only through an explicit, stated
+   allocation. The two views are never summed into one unlabelled figure.
+
 ## Acceptance criteria
 
 - AC-1: a costing that claims to follow this standard lists its events, with frequency, touch probability,
@@ -101,6 +126,9 @@ Rules:
 - AC-2: it reports design-lever and AI-lever effects separately.
 - AC-3: its AI factor scales no-AI minutes (rule 2), and a reviewer can confirm this from the model inputs.
 - AC-4: every parameter has a range and a source, or is marked as an assumption to validate.
+- AC-5: every expense line names its obligation, workload or capacity trigger (rule 7).
+- AC-6: incremental cash and fully loaded cost are reported separately, with each shared-cost allocation stated
+  (rule 8).
 
 ## Validation requirements
 
@@ -111,8 +139,10 @@ Rules:
 
 ## Status on the Phase III ladder
 
-Strategically approved (progression authorized) → **Requirements incorporated** as this draft standard. Not
-accepted as canonical methodology; that needs the owner's acceptance after VR-1 and VR-2.
+Strategically approved (progression authorized 2026-11-26) → **Requirements incorporated**: accepted as an
+Echelon Foundry methodology standard by the owner on 2026-11-27. **Not validated:** VR-1..VR-3 remain open
+gates; their results may lead to a superseding record. Acceptance authorizes use of the method, not any
+expenditure.
 
 ## Reassessment
 

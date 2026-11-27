@@ -36,6 +36,20 @@
             "modified"
           ],
           "reason": "WI-0008: correct origin repository visibility (daf-landscape is public)"
+        },
+        "EXE-20261127T023317354Z-c70b896a": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-27T02:34:09Z",
+          "operations": [
+            "modified"
+          ],
+          "reason": "WI-0009: record owner ratification (2026-11-27, PR #13): status draft -> accepted; validation gates preserved"
         }
       }
     },
@@ -43,7 +57,7 @@
       "DF-ECHELON-FOUNDRY-MTH-2026-48F0",
       "docs/methodology-proposals/README.md"
     ],
-    "status": "draft",
+    "status": "accepted",
     "superseded_by": [],
     "supersedes": [],
     "tags": [
@@ -54,8 +68,8 @@
       "model-validation",
       "proposal"
     ],
-    "title": "Proposed engineering standard - durable research and economic models are F# programs with byte-identical reproduction and register validation commands",
-    "updated": "2026-11-26"
+    "title": "Engineering standard - durable research and economic models are F# programs with byte-identical reproduction and register validation commands",
+    "updated": "2026-11-27"
   },
   {
     "confidence": "high",
@@ -140,6 +154,20 @@
             "modified"
           ],
           "reason": "WI-0008: correct origin repository visibility (daf-landscape is public)"
+        },
+        "EXE-20261127T023317354Z-c70b896a": {
+          "actor": {
+            "id": "anthropic/claude-code",
+            "kind": "agent",
+            "model": "unknown",
+            "provider": "anthropic",
+            "runtime": "claude-code"
+          },
+          "at": "2026-11-27T02:34:09Z",
+          "operations": [
+            "modified"
+          ],
+          "reason": "WI-0009: record owner ratification (2026-11-27, PR #13): status draft -> accepted; validation gates preserved"
         }
       }
     },
@@ -147,7 +175,7 @@
       "DF-ECHELON-FOUNDRY-ENG-2026-6BEA",
       "docs/methodology-proposals/README.md"
     ],
-    "status": "draft",
+    "status": "accepted",
     "superseded_by": [],
     "supersedes": [],
     "tags": [
@@ -158,7 +186,7 @@
       "enterprise-design",
       "proposal"
     ],
-    "title": "Proposed standard - cost AI-native enterprise designs with event-level economics that separate design effects from AI effects",
-    "updated": "2026-11-26"
+    "title": "Standard - cost AI-native enterprise designs with event-level economics that separate design effects from AI effects, with zero-based costing and separate incremental cash and fully loaded views",
+    "updated": "2026-11-27"
   }
 ]

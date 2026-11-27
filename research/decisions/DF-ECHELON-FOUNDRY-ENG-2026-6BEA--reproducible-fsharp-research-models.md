@@ -1,10 +1,10 @@
 ---
 id: DF-ECHELON-FOUNDRY-ENG-2026-6BEA
-title: Proposed engineering standard - durable research and economic models are F# programs with byte-identical reproduction and register validation commands
-status: draft
+title: Engineering standard - durable research and economic models are F# programs with byte-identical reproduction and register validation commands
+status: accepted
 decision_type: engineering-standard
 created: 2026-11-26
-updated: 2026-11-26
+updated: 2026-11-27
 created_by_agent: claude
 confidence: high
 supersedes: []
@@ -36,12 +36,26 @@ provenance:
         model: unknown
         runtime: claude-code
       reason: "WI-0008: correct origin repository visibility (daf-landscape is public)"
+    EXE-20261127T023317354Z-c70b896a:
+      operations: [modified]
+      at: 2026-11-27T02:34:09Z
+      actor:
+        kind: agent
+        id: anthropic/claude-code
+        provider: anthropic
+        model: unknown
+        runtime: claude-code
+      reason: "WI-0009: record owner ratification (2026-11-27, PR #13): status draft -> accepted; validation gates preserved"
 ---
 
 # DF-ECHELON-FOUNDRY-ENG-2026-6BEA: Reproducible F# research models
 
 - **Date:** 2026-11-26
-- **Status:** draft (proposed standard note; not accepted)
+- **Status:** accepted (owner-ratified standard, 2026-11-27); validation requirements VR-1..VR-3 preserved and open
+- **Owner ratification:** 2026-11-27. The owner confirmed in session the direction posted on
+  echelon-foundry PR #13: "Owner approves both draft standards for ratification, preserving validation gates.
+  Extend event-level costing with zero-based costing: every expense requires a justified obligation, workload or
+  capacity trigger; separate incremental cash and fully loaded economic costs."
 - **Decision type:** engineering standard
 - **Work item:** WI-0007
 - **Origin:** cross-repository implication XRI-016 (`kemiller2002/daf-landscape`, public, commit `10b92f4`:
@@ -50,7 +64,8 @@ provenance:
   XRI-016, source SRC-063). XRI-016 was registered as "standard-note, informational": it records existing
   practice rather than introducing new practice.
 - **Authority:** owner approval of the Phase II decisions and authorized progression of XRI-001..XRI-018,
-  2026-11-26. Accepting this as a canonical Echelon engineering standard is a separate owner decision.
+  2026-11-26. The owner accepted it as an Echelon engineering standard on 2026-11-27 (see Owner ratification
+  above).
 
 ## Context
 
@@ -60,7 +75,7 @@ implemented that preference and added two commands that made its results auditab
 output and proves it is byte-identical to the committed outputs, and one that validates the research registers
 and their cross-references.
 
-## Proposed decision
+## Decision
 
 A research or economic model whose outputs support a recorded decision is built to these rules:
 
@@ -90,8 +105,9 @@ A research or economic model whose outputs support a recorded decision is built 
 
 ## Status on the Phase III ladder
 
-Strategically approved (progression authorized) → **Requirements incorporated** as this draft standard note.
-Not accepted as canonical; it codifies practice already demonstrated in the origin model.
+Strategically approved (progression authorized 2026-11-26) → **Requirements incorporated**: accepted as an
+Echelon Foundry engineering standard by the owner on 2026-11-27. It codifies practice already demonstrated in the
+origin model. **Not validated** for other models: VR-1..VR-3 apply per conforming model.
 
 ## Scope note
 

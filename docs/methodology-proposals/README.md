@@ -92,4 +92,9 @@ Whether and how that should change (and any contributor assignment instruments) 
 
 ## Status
 
-All proposals are at "proposed". None is accepted by its framework's owner.
+All proposals on this page are at "proposed". None is accepted by its framework's owner.
+
+Related records: `DF-ECHELON-FOUNDRY-MTH-2026-48F0` (event-level and zero-based costing) and
+`DF-ECHELON-FOUNDRY-ENG-2026-6BEA` (reproducible research models) were accepted by the owner on 2026-11-27, with
+their validation gates open. The Praxis requirements `RQ-ROS-2026-6C17`, `RQ-ROS-2026-0863` and
+`RQ-ROS-2026-6D60` were accepted by the owner on 2026-11-27 and are not implemented.
